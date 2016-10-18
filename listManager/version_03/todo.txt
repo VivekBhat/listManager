@@ -1,0 +1,23 @@
+1. Add an edit container for the line item to the template 
+	a. Add an text input and bind it to item.name using the ng-model directive  
+	b. Add a save button and call your item.save function on click using ng-click
+	c. Add a cancel button and call your item.cancel function on click using ng-click
+2. Add Edit Functionality
+	a. Update the ListItem.edit function to set mode to edit
+	b. Update the ListItem.save function to set mode to view
+	c. Update the ListItem.cancel function to set mode to view
+	d. Use the ng-if directive to toggle between view-mode and edit-mode based on the mode property
+	e. Test that you can now toggle between view and edit modes
+3. Write the code to complete Save and Cancel
+	a. Save should work because the edit input is bound to the name already
+	b. To cancel we need to set the text back to what it was before it was changed
+		i. Update the ListItem.edit function to set an originalValue property of the item
+		ii. Update the ListItem.cancel function to set the name property to the originalValue
+	c. Test that both Save and Cancel are working
+4. Use the ng-class directive to toggle between checked and unchecked state
+	a. set the icon to 'fa-check-square-o' when item.completed
+	b. set the icon to 'fa-square-o' when NOT item.completed
+	c. on the li element use ng-class directive to set a class of complete when item.completed
+5. Add ng-enter directive (stolen from github gists)
+	a. add ng-enter directive on edit input to call ListItem.save()
+	b. add ng-enter directive on add input to call List.addItem()

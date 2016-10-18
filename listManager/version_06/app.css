@@ -1,0 +1,91 @@
+html
+{
+  background: #efefef;
+}
+
+body
+{
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 600px;
+}
+
+.form-control.list-name
+{
+  border: 0; 
+  box-shadow: none;
+}
+
+.input-group .input-group-btn .btn-success
+{
+  border-top-left-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+
+.btn.btn-default.last
+{
+  border-top-right-radius: 5px !important; 
+  border-bottom-right-radius: 5px !important; 
+}
+
+#add-control
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+li.list-group-item
+{
+  verticle-align: center;
+}  
+
+li.list-group-item.complete .name
+{
+    text-decoration: line-through;
+}
+  
+li.list-group-item .fa
+{
+    font-size: 18px;
+    margin-right: 5px;
+    color: rgba(139,195,74,1);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;    
+}
+
+li.list-group-item .fa.fa-square-o
+{
+  color: #000000;
+}
+  
+li.list-group-item .pull-right .fa
+{
+  color: rgba(0,0,0,.3);
+}    
+
+li.list-group-item .pull-right .fa:hover
+{
+  color: rgba(0,0,0,.8);
+}
+  
+li.list-group-item .edit-mode .form-control
+{
+  display: inline-block;
+  width: calc(100% - 90px);
+}
+    
+li.list-group-item .edit-mode .pull-right
+{
+  margin-top: 6px;
+}

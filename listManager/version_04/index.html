@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="shoppingList">
+
+  <head>
+    <link data-require="bootstrap-css@3.*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="font-awesome@4.5.0" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script data-require="angular-animate@1.5.*" data-semver="1.5.8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script data-require="angular-touch@1.5.*" data-semver="1.5.8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+    <script data-require="ui-bootstrap@2.1.3" data-semver="2.1.3" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="app.css" />
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="ShoppingListCtrl as vm">
+    
+    <!-- List Title Control-->
+    <input class="form-control list-name" ng-model="vm.currentList.name" placeholder="List Title..." />
+    
+    <!-- Add Item Control -->
+    <div id="add-control" class="input-group">
+      <input class="form-control" placeholder="Add a New Item..." ng-model="vm.newItem" ng-enter="vm.currentList.addItem(vm.newItem)" />
+      <span class="input-group-btn">
+        <button class="btn btn-primary" ng-click="vm.currentList.addItem(vm.newItem)">
+          <i class="fa fa-plus-circle"></i> Add
+        </button>
+      </span>
+    </div>
+  
+    <!-- Create a List of ListItems -->
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="item in vm.currentList.listItems" ng-class="{'complete': item.completed}">
+        <i class="fa" uib-tooltip="Check to Complete" ng-click="item.complete()" ng-class="{'fa-check-square-o': item.completed, 'fa-square-o': !item.completed}"></i>
+        
+        <!-- The View Mode of a given list item -->
+        <span class="view-mode" ng-if="item.mode == 'view'">
+          <span class="name">{{item.name}}</span>
+          <span class="pull-right">
+            <i class="fa fa-pencil" uib-tooltip="Edit" ng-click="item.edit()"></i>
+            <i class="fa fa-trash" uib-tooltip="Delete" ng-click="item.delete()"></i>
+          </span>
+        </span>
+
+        <!-- Placeholder for the Edit Mode of a given list item -->
+        <span class="edit-mode" ng-if="item.mode == 'edit'">
+          <input class="form-control input-sm" ng-model="item.name" ng-enter="item.save()" />
+          <span class="pull-right">
+            <i class="fa fa-floppy-o" uib-tooltip="Save" ng-click="item.save()"></i>
+            <i class="fa fa-ban" uib-tooltip="Ban" ng-click="item.cancel()"></i>
+          </span>
+        </span>
+
+      </li>
+    </ul>
+
+  </body>
+</html>

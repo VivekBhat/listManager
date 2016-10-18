@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="shoppingList">
+
+  <head>
+    <link data-require="bootstrap-css@3.*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="font-awesome@4.5.0" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <script data-require="angular.js@1.5.8" data-semver="1.5.8" src="https://code.angularjs.org/1.5.8/angular.js"></script>
+    <script data-require="angular-animate@1.5.*" data-semver="1.5.8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script data-require="angular-touch@1.5.*" data-semver="1.5.8" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+    <script data-require="ui-bootstrap@2.1.3" data-semver="2.1.3" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <link rel="stylesheet" href="app.css" />
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="ShoppingListCtrl as vm">
+    
+    <!-- List Title Control-->
+    <input class="form-control list-name" ng-model="vm.currentList.name" placeholder="List Title..." />
+    
+    <!-- Add Item Control -->
+    <div id="add-control" class="input-group">
+      <input class="form-control" placeholder="Add a New Item..." ng-model="vm.newItem" />
+      <span class="input-group-btn">
+        <button class="btn btn-primary">
+          <i class="fa fa-plus-circle"></i> Add
+        </button>
+      </span>
+    </div>
+  
+    <!-- Create a List of ListItems -->
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="item in vm.currentList.listItems">
+        <i class="fa fa-square-o" uib-tooltip="Check to Complete"></i>
+        
+        <!-- The View Mode of a given list item -->
+        <span class="view-mode">
+          <span class="name">{{item.name}}</span>
+          <span class="pull-right">
+            <i class="fa fa-pencil" uib-tooltip="Edit"></i>
+            <i class="fa fa-trash" uib-tooltip="Delete"></i>
+          </span>
+        </span>
+
+        <!-- Placeholder for the Edit Mode of a given list item -->
+      </li>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+1. Add Items to the List - DONE
+2. Edit Items on the List - DONE
+3. Remove Items from the List - DONE
+4. Mark an Item off the List - DONE
+
+Bonus
+5. Create New Lists
+6. Cycle through Lists
+7. Open Last used List by Default
+8. Remove List
+
+* Make Save save to LocalStorage

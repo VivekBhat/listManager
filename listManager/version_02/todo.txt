@@ -1,0 +1,14 @@
+Define your models and Create a Dummy List in app.js
+	1. Create some functions stubs for ListItems using prototypes 
+		a. Create a Complete Function - this method should flip the completed flag
+		b. Create a Edit Function
+		c. Create a Delete Function
+	2. Create a Add Function Stub using Prototype for List
+		a. Try and implement the method by adding a listItem to the List using the constructor we created earlier.
+		b. Remember to clear out the vm.newItem value
+	3. On the HTML Template add the following ng-click handlers
+		a. Edit Button of a ListItem
+		b. Delete Button of a ListItem
+		c. Complete Button of a ListItem
+		d. Add Button for the List
+	4. Test to make sure these functions are being called

@@ -1,0 +1,17 @@
+1. Inject localstorage into your controller 
+2. Create a saveList Function that sets $localStorage.currentList = vm.currentList
+	a. Call the Save Function wherever changes are made to the list or items
+	b. Make sure the save occurs after other actions are complete
+3. Check to see if currentList exists on $localStorage 
+	a. If it does set vm.currentList to $localStorage.currentList
+	b. If it does NOT set vm.currentList to a new List
+	c. Test this by creating a list and then refreshing the page (your list should remain)
+4. Great! Just one small issue our prototype functions no longer work? Why is this?
+	a. $localStorage just stores the JSON and is not the object we need to update our constructors for List and ListItem
+	b. Hint pass a data object to the constructors and check for properties
+	c. You will also need to update the List.addItem function
+5. We need to create 3 function stubs for the following functions. We will do this on the view model
+	a. addList
+	b. nextList
+	c. prevList
+	d. set the buttons on the template accordingle so that clicking the buttons will fire the functions

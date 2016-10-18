@@ -1,0 +1,15 @@
+1. Change the saveList function to save to an array of lists named allLists
+	a. Use the currentListIndex to know the save position
+	b. update the vm.totalLists count to be the length of allLists
+	c. Instead of pulling currentList from localStorage pull allLists from localStorage and set the currentList
+2. Update the addList function
+	a. push the currentList to the allList variable in localStorage
+	b. sent currentList to a new List
+	c. increment currentListIndex
+	d. increment totalLists
+3. Update the nextList and prevList functions
+	a. increment / decrement currentListIndex;
+    b. set currentList to a new List where allLists[vm.currentListIndex];
+    c. try and come up with a formula to disable / enable the next and prev buttons to link to allLists
+4. Update the List delete function to splice the allLists array
+	a. Make sure to account from deleting from the beginning of the list, end of list, and anywhere in between 

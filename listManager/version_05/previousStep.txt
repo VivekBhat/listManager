@@ -1,0 +1,17 @@
+1. Remove the dummy list items from the controller 
+2. Remove unneeded console.log statements
+3. We missed the delete function earlier so lets complete that
+	a. Using the index splice the array of listItems to remove the item chosen
+	b. Remember to loop through the listItems and reindex after deleting
+4. Add placeholder buttons to the template to do the following
+	a. Create a New List
+	b. Delete List
+	c. Navigate to Next List
+	d. Navigate to Previous List
+4. Add a prototype function for Delete List
+	a. clear the list name
+	b. clear the list items
+	c. add the click event to the button
+	d. test the function  
+5. Add a placeholder listItem to be displayed when there are no listItems
+	a. Use ng-if to look at the length of the listItems array to include this
