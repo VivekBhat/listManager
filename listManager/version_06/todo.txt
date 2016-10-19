@@ -1,19 +1,15 @@
-Define your models and Create a Dummy List in app.js
-	1. Create a List Model with the following properties 
-		a. name 
-		b. listItems
-	2. Create a ListItem Model with the following properties
-		a. name
-		b. complete
-		c. mode
-		d. index 
-	3. Create a Dummy List with some data
-
-Begin to construct a view (Hint Use Bootstrap to style)
-	4. Create a text input for List Name
-	5. Create an input group with text input and add button
-	6. Using ng-repeat directive create an unordered list of list items with the following
-		a. Wrap the list item in a container with a view-mode class
-		b. A element for complete status
-		c. A Button to Edit
-		d. A Button to Delete
+1. Change the saveList function to save to an array of lists named allLists
+	a. Use the currentListIndex to know the save position
+	b. update the vm.totalLists count to be the length of allLists
+	c. Instead of pulling currentList from localStorage pull allLists from localStorage and set the currentList
+2. Update the addList function
+	a. push the currentList to the allList variable in localStorage
+	b. sent currentList to a new List
+	c. increment currentListIndex
+	d. increment totalLists
+3. Update the nextList and prevList functions
+	a. increment / decrement currentListIndex;
+    b. set currentList to a new List where allLists[vm.currentListIndex];
+    c. try and come up with a formula to disable / enable the next and prev buttons to link to allLists
+4. Update the List delete function to splice the allLists array
+	a. Make sure to account from deleting from the beginning of the list, end of list, and anywhere in between 
