@@ -1,19 +1,6 @@
-Define your models and Create a Dummy List in app.js
-	1. Create a List Model with the following properties 
-		a. name 
-		b. listItems
-	2. Create a ListItem Model with the following properties
-		a. name
-		b. complete
-		c. mode
-		d. index 
-	3. Create a Dummy List with some data
+Have Fun Enhancing to your hearts content.
 
-Begin to construct a view (Hint Use Bootstrap to style)
-	4. Create a text input for List Name
-	5. Create an input group with text input and add button
-	6. Using ng-repeat directive create an unordered list of list items with the following
-		a. Wrap the list item in a container with a view-mode class
-		b. A element for complete status
-		c. A Button to Edit
-		d. A Button to Delete
+Things you could do
+	- Store Lists in a DB
+	- Create filters for completed tasks
+	- Anything else the sky is the limit
