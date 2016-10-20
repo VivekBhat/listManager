@@ -6,8 +6,6 @@ Designed for a Hands on Workshop
 2. Edit Items on the List - DONE
 3. Remove Items from the List - DONE
 4. Mark an Item off the List - DONE
-
-Bonus
 5. Create New Lists - DONE
 6. Cycle through Lists - DONE
 7. Open Last used List by Default - DONE
